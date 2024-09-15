@@ -7,7 +7,7 @@ app.use(express.json());
 require('dotenv').config();
 
 const { GoogleGenerativeAI } = require('@google/generative-ai');
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEN_AI_KEY);
+const genAI = new GoogleGenerativeAI(process.txt.GOOGLE_GEN_AI_KEY);
 
 app.post('/gemini', async (req, res) => {
     const model = genAI.getGenerativeModel({ model: "gemini-1.0-pro" });
